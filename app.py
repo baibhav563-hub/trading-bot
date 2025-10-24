@@ -31,9 +31,11 @@ def webhook():
     "transaction_type": action,
     "order_type": "MARKET",
     "price": 0,
+    "trigger_price": 0,
     "product": "I",
     "validity": "DAY"
 }
+
 
 
     headers = {
