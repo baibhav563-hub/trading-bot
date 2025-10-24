@@ -9,7 +9,7 @@ load_dotenv()
 app = Flask(__name__)
 
 WEBHOOK_SECRET = os.getenv("WEBHOOK_SECRET")
-ACCESS_TOKEN = os.getenv("UPSTOX_ACCESS_TOKEN")
+ACCESS_TOKEN = os.getenv("UPSTOX_ACCESS_TOKEN", "").strip()
 USE_SANDBOX = os.getenv("USE_SANDBOX", "true").lower() == "true"
 
 @app.route("/webhook", methods=["POST"])
