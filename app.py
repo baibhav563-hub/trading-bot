@@ -26,13 +26,15 @@ def webhook():
     url = f"{base_url}/v2/order/place"
 
     payload = {
-        "instrument_token": instrument,
-        "quantity": qty,
-        "transaction_type": action,
-        "order_type": "MARKET",
-        "product": "I",
-        "validity": "DAY"
-    }
+    "instrument_token": instrument,
+    "quantity": qty,
+    "transaction_type": action,
+    "order_type": "MARKET",
+    "price": 0,
+    "product": "I",
+    "validity": "DAY"
+}
+
 
     headers = {
         "Authorization": f"Bearer {ACCESS_TOKEN}",
